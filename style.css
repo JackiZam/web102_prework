@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap');
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Cabin';
     background-color: #758190;
@@ -9,14 +13,46 @@ body {
     width: 50px;
 }
 
+.siteTitle
+{
+    display: flex;
+    flex: row;
+    align-items: center;
+    margin-left: 10px;
+}
+
 .header {
     display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
     background-color: lightblue;
     padding: 1%;
     align-items: center;
     margin-left: -10px;
     margin-right: -10px;
     margin-top: -10px;
+}
+
+.header-link {
+    margin-right: 10px;
+    text-decoration: none;
+    color: black;
+}
+
+.header-link:hover {
+    cursor: pointer;
+}
+
+#title {
+    text-align: center;
+    font-size: 32px;
+    margin-top: 8vh;
+}
+
+
+#description {
+    text-align: center;
+    font-size: 18px;
 }
 
 .stats-container {
@@ -69,7 +105,26 @@ body {
 button {
     font-family: 'Cabin';
     border: none;
+    border-radius: 7px;    
+}
+
+.filterBtn {
     padding: 1%;
     margin: 1%;
-    border-radius: 7px;
+    font-size: 14px;
+}
+
+.filterBtn:hover {
+    box-shadow: 0 0 30px yellow;
+}
+
+.stats-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stats-container:hover {
+    cursor: pointer;
+    box-shadow: 0 0 30px lightblue;
 }

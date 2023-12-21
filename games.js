@@ -90,13 +90,15 @@ const games = ` [
   }
 ]
 `
+// Backers is the number of unique people who have donated to fund a game
+// Pledged holds a dollar amount referring to the amount of money backers have donated to the game
 const template = `
 {
 "name": "",
 "description": "",
 "pledged": 0,
 "goal": 0,
-"backers": 0,
+"backers": 0, 
 "img": ""
 },
 `
