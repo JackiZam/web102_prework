@@ -17,22 +17,6 @@ function deleteChildElements(parent) {
     }
 }
 
-function showAllData() {
-    const bigDiv = document.createElement("div");
-    bigDiv.classList.add("allInfoDiv");
-    const allDataDisp = `
-        <h1>${game.name}</h1>
-        <p>${game.description}</p>
-        <p>Pledges: ${game.pledges}</p>
-        <p>Goal: ${game.goal}</p>
-        <p>Backers: ${game.backers}</p>
-    `;
-
-    bigDiv.innerHTML = allDataDisp;
-
-    document.appendChild(bigDiv);
-}
-
 /*****************************************************************************
  * Challenge 3: Add data about each game as a card to the games-container
  * Skills used: DOM manipulation, for loops, template literals, functions
@@ -219,18 +203,11 @@ const topPledge = document.createElement("p");
 topPledge.innerHTML = `
     <p>${game1.name}</p>
 `;
-let topFundedCard = document.getElementById("first-game");
-topFundedCard.appendChild(topPledge);
+firstGameContainer.appendChild(topPledge);
 
 // do the same for the runner up item
 const runnerUpPledge = document.createElement("p");
 runnerUpPledge.innerHTML = `
     <p>${game2.name}</p>
 `;
-let runnerUpFundedCard = document.getElementById("second-game");
-runnerUpFundedCard.appendChild(runnerUpPledge);
-
-// let headerLink = document.getElementsByClassName("header-link");
-// let firstHeaderLink = headerLink[0];
-// let gamesSection = document.getElementById("games-container");
-// firstHeaderLink.addEventListener("click", gamesSection.scrollIntoView);
+secondGameContainer.appendChild(runnerUpPledge);
